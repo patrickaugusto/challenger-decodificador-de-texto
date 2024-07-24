@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --cor-primaria: #F8F4E1;
+    --cor-secundaria: #AF8F6F;
+    --cor-terciaria: #74512D;
+    --cor-quarternaria: #543310;
+
+    --fonte-primaria: "Roboto", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonte-primaria);
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 10px;
+}
+
+/*Lado esquerdo*/
+
+.conteudo_criptar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+#inserir_texto{
+    width: 60rem;
+    height: 35rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    resize: none;
+    padding: 15px 10px;
+}
+
+.botoes_criptografar{
+    display: flex;
+    gap: 24px;
+}
+
+.btn_criptografar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: var(--cor-terciaria) solid 2px;
+    background-color: var(--cor-secundaria);
+    font-size: 1rem;
+    color: var(--cor-primaria);
+}
+
+.btn_descriptografar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: var(--cor-terciaria) solid 2px;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+}
+
+/*Lado dirieto*/
+
+.conteudo_exibir_criptografia{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.212);
+    gap: 2rem;
+}
+
+.conteudo_texto{
+    padding: 0% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+#normal{
+    visibility: visible;
+}
+
+#mudar{
+    visibility: hidden;
+}
+
+#texto_criptografado{
+    font-size: 24px;
+}

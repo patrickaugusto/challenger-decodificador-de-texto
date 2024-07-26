@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
 
-:root{
+:root {
     --cor-primaria: #F8F4E1;
     --cor-secundaria: #AF8F6F;
     --cor-terciaria: #74512D;
@@ -11,22 +11,25 @@
     --fonte-secundaria: "Montserrat", sans-serif;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: var(--fonte-primaria);
 }
 
-.conteudo{
+.conteudo {
     display: flex;
-    justify-content: center;
-    gap: 150px;
-    padding: 10px;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px;
+    background-color: #F8F4E1;
 }
 
-/*Lado esquerdo*/
 
-.conteudo_criptar{
+/* Lado esquerdo */
+
+.conteudo_criptar {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +37,7 @@
     gap: 100px;
 }
 
-#inserir_texto{
+#inserir_texto {
     width: 60rem;
     height: 35rem;
     border: none;
@@ -44,62 +47,89 @@
     padding: 15px 10px;
 }
 
-.botoes_criptografar{
+.botoes_criptografar {
     display: flex;
     gap: 24px;
 }
 
-.btn_criptografar{
+.btn_criptografar, .btn_descriptografar {
     width: 328px;
     height: 67px;
     border-radius: 24px;
     border: var(--cor-terciaria) solid 2px;
-    background-color: var(--cor-secundaria);
     font-size: 1rem;
+}
+
+.btn_criptografar {
+    background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
 
-.btn_descriptografar{
-    width: 328px;
+.btn_descriptografar {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+}
+
+/* Lado direito */
+
+.conteudo_exibir_criptografia {
+    padding: 15px 5px;
+    width: 400px;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.212);
+}
+
+.conteudo_exibir{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    visibility: visible;
+    
+}
+
+.conteudo_texto {
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    gap: 1rem;
+    overflow: auto; 
+    max-height: 20rem; 
+    overflow-wrap: break-word; 
+}
+
+.conteudo_criptografia {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    gap: 25px;
+}
+
+.conteudo_texto_criptografia {
+    overflow-wrap: break-word;
+    overflow: auto;
+    border-radius: 5px;
+    height: 600px;
+  }
+
+#texto_criptografado {
+    font-size: 24px;
+    text-wrap: wrap; /* Preserve line breaks */
+}
+
+.campo_btn{
+    display: flex;
+    justify-content: center;
+}
+.btn_copiar{
+    width: 200px;
     height: 67px;
     border-radius: 24px;
     border: var(--cor-terciaria) solid 2px;
     font-size: 1rem;
-    color: var(--cor-secundaria);
-}
-
-/*Lado dirieto*/
-
-.conteudo_exibir_criptografia{
-    display: flex;
-    align-items: center;
-    width: 400px;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--cor-primaria);
-    border-radius: 32px;
-    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.212);
-    gap: 2rem;
-}
-
-.conteudo_texto{
-    padding: 0% 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-wrap: wrap;
-    text-align: center;
-    gap: 1rem;
-}
-
-#normal{
-    visibility: visible;
-}
-
-#mudar{
-    visibility: hidden;
-}
-
-#texto_criptografado{
-    font-size: 24px;
 }

@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador de Texto</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <!-- Adicionado defer para garantir que o script seja carregado após o HTML -->
+  </head>
 
-<body>
-    <header>
-        <a a="logo_link">
-            <img class="logo_img" src="assets/Logo.png" alt="">
-        </a>
-    </header>
-    <main class="conteudo">
+  <body>
+      <main class="conteudo">
+        <header class="cabecalho">
+            <a href="logo_link">
+              <img class="logo_img" src="assets/Logo.png" alt="Logo" />
+            </a>
+          </header>
         <section class="conteudo_criptar">
-            <textarea name="textarea" id="inserir_texto" placeholder="Digite seu texto Aqui"></textarea>
-            <div class="botoes_criptografar">
-                <button class="btn_criptografar" onclick="criptografar()">Criptografar</button>
-                <button class="btn_descriptografar" onclick="descriptografar()">Descriptografar</button>
-            </div>
+          <textarea id="inserir_texto" placeholder="Digite seu texto Aqui"></textarea>
+          <div class="botoes_criptografar">
+            <button class="btn_criptografar" onclick="criptografar()">Criptografar</button>
+            <button class="btn_descriptografar" onclick="descriptografar()">Descriptografar</button>
+          </div>
         </section>
+      
         <section class="conteudo_exibir_criptografia">
-            <div id="normal">
-                <img class="img_txt_not_Found" src="assets/Imagem_notFound.png" alt="">
-                <div class="conteudo_texto">
-                    <h2>Nenhuma mensagem encontrada</h2>
-                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                </div>
+          <div id="conteudo_exibir" class="conteudo_exibir">
+            <img id="img_txt_not_Found" src="assets/Imagem_notFound.png" alt="Texto não encontrado" />
+            <div class="conteudo_texto">
+              <h2 id="mensagem_titulo">Nenhuma mensagem encontrada</h2>
+              <p>
+                Digite um texto que você deseja criptografar ou descriptografar.
+              </p>
             </div>
+          </div>
+      
+          <div id="conteudo_criptografia" class="conteudo_criptografia">
+            <div class="conteudo_texto_criptografia">
+              <p id="texto_criptografado" class="texto_criptografado">
+                texto com criptografia
+              </p>
+            </div>
+            <div class="campo_btn">
+                <button class="btn_copiar">Copiar</button>
+            </div>
+            
 
-            <div id="mudar" >
-                <div class="conteudo_texto">
-                    <p id="texto_criptografado">Digite um texto que você deseja criptografar ou descriptografar.</p>
-                </div>
-            </div>
+          </div>
+
 
         </section>
-    </main>
-    <footer>
-
+      </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Patrick Augusto</p>
     </footer>
-
-</body>
-
+  </body>
 </html>

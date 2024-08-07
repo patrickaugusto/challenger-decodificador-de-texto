@@ -1,36 +1,46 @@
 function criptografar() {
+    let texto = document.getElementById("inserir_texto").value.trim();
 
-    mudarEstado();
-    let texto_normal = document.getElementById("inserir_texto").value;
-    let texto_criptografado = "";
-
-    for (let i = 0; i < texto_normal.length; i++) {
-        let letra = texto_normal[i];
+    switch (true) {
+        case (texto === ""):
+            alert("Digite uma mensagem");
+            break;
         
-        switch (letra) {
-            case "a":
-                texto_criptografado += "ai";
-                break;
-            case "e":
-                texto_criptografado += "enter";
-                break;
-            case "i":
-                texto_criptografado += "imes";
-                break;
-            case "o":
-                texto_criptografado += "ober";
-                break;
-            case "u":
-                texto_criptografado += "ufat";
-                break;
-            default:
-                texto_criptografado += letra;
-                break;
-        }
-    }
+        default:
+            mudarEstado();
+            let texto_criptografado = "";
 
-    document.getElementById("texto_criptografado").textContent = texto_criptografado; // Corrigido de innerHTML para textContent
+            for (let i = 0; i < texto.length; i++) {
+                let letra = texto[i];
+                
+                switch (letra) {
+                    case "a":
+                        texto_criptografado += "ai";
+                        break;
+                    case "e":
+                        texto_criptografado += "enter";
+                        break;
+                    case "i":
+                        texto_criptografado += "imes";
+                        break;
+                    case "o":
+                        texto_criptografado += "ober";
+                        break;
+                    case "u":
+                        texto_criptografado += "ufat";
+                        break;
+                    default:
+                        texto_criptografado += letra;
+                        break;
+                }
+            }
+
+            // Atualiza o conteúdo do elemento com o texto criptografado
+            document.getElementById("texto_criptografado").textContent = texto_criptografado;
+            break;
+    }
 }
+
 
 function descriptografar() {
     let texto_criptografado = document.getElementById("inserir_texto").value;

@@ -1,6 +1,22 @@
 @media (max-width: 800px) {
+
+    .cabecalho{
+        flex-direction: row;
+    }
+    .conteudo_criptar{
+        width: 100%;
+    }
+
     .conteudo {
         flex-direction: column;
         gap: 25px;
+    }
+
+    .conteudo_exibir_criptografia {
+        width: 100%;
+    }
+
+    #img_txt_not_Found{
+        display: none;
     }
 }

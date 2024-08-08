@@ -21,50 +21,56 @@
 
 .conteudo {
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: space-around;
+    gap: 2rem;
     padding: 20px;
     background-color: var(--cor-5);
 }
 
+/* Header */
+
 .cabecalho{
+    padding: 1rem;
     border: green solid;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 
 /* Lado esquerdo */
 
+
 .conteudo_criptar {
-    margin-top: 100px;
+    width: 750px;
+    margin-top: 6.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
-
-
+    gap: 6.25rem;
     border: red solid;
 }
 
 #inserir_texto {
-    width: 60rem;
+    width: 100%;
     height: 35rem;
     border: none;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 1.5rem;
     resize: none;
     padding: 15px 10px;
 }
 
 .botoes_criptografar {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
 }
 
 .btn_criptografar, .btn_descriptografar {
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+    width: 15.5rem;
+    height: 4.18rem;
+    border-radius: 1.5rem;
     border: var(--cor-3) solid 2px;
     font-size: 1rem;
 }
@@ -94,13 +100,11 @@
 .conteudo_exibir_criptografia {
     background-color: var(--cor-6);
     padding: 15px 5px;
-    width: 400px;
     border-radius: 32px;
-    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.212);
+    box-shadow: 0 1.5rem 32px -8px rgba(0, 0, 0, 0.212);
     display: flex;
-
-
     border: blue solid;
+    width: 400px;
 }
 
 .conteudo_exibir{
@@ -110,7 +114,12 @@
     align-items: center;
     gap: 2rem;
     visibility: visible;
+    width: 100%;
     
+}
+
+#img_txt_not_Found{
+    width: 80%;
 }
 
 .conteudo_texto {
@@ -132,6 +141,7 @@
     justify-content: center;
     padding: 15px;
     gap: 25px;
+    width: 100%;
 }
 
 .conteudo_texto_criptografia {
@@ -141,8 +151,12 @@
     height: 600px;
   }
 
+.txt_nao_encontrado{
+    font-size: 1.7rem;
+}
+
 #texto_criptografado {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-wrap: wrap; 
 }
 
@@ -154,7 +168,7 @@
 .btn_copiar{
     width: 200px;
     height: 67px;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     border: var(--cor-3) solid 2px;
     font-size: 1rem;
 }
@@ -165,9 +179,7 @@
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 .rodape p {

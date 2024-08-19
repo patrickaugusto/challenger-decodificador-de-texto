@@ -1,7 +1,10 @@
 # Challenge Decodificador de Texto  
 :construction: Projeto em construção :construction:
 
-### :hammer: Funcionalidades do projeto
+### Descrição do Projeto
+É uma aplicação que criptografa textos, assim você poderá trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.
+
+### :hammer: Funcionalidades do Projeto
 
 * `Funcionalidade 1`: Criptografação de texto - é utilizado algumas chaves para poder fazer a criptografia do texto:
      * A letra "e" é convertida para "enter"

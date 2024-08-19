@@ -11,3 +11,10 @@
       * A letra "u" é convertida para "ufat"
 - `Funcionalidade 2`: Descriptografia de texto - reverte as mudanças feitas a partir da criptografia.
 - `Funcionalidade 3`: Botão de Voz - Criar um texto a partir de um audio.
+
+* Primeiro
+* Segundo
+    * Segundo.1
+    * Segundo.2
+* Terceiro
+

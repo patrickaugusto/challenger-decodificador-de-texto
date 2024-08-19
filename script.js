@@ -35,7 +35,6 @@ function criptografar() {
                 }
             }
 
-            // Atualiza o conteúdo do elemento com o texto criptografado
             document.getElementById("texto_criptografado").textContent = texto_criptografado;
             break;
     }
@@ -86,7 +85,7 @@ function descriptografar() {
         }
     }
 
-    document.getElementById("texto_criptografado").textContent = texto_descriptografado; // Corrigido de innerHTML para textContent
+    document.getElementById("texto_criptografado").textContent = texto_descriptografado;
 }
 
 function mudarEstado() {

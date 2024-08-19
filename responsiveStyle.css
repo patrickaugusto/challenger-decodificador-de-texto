@@ -9,7 +9,11 @@
 
     .conteudo {
         flex-direction: column;
-        gap: 25px;
+        gap: 1rem;
+    }
+
+    #inserir_texto{
+        height: 20rem;
     }
 
     .conteudo_exibir_criptografia {
@@ -18,5 +22,11 @@
 
     #img_txt_not_Found{
         display: none;
+    }
+
+    .botoes_criptografar {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }

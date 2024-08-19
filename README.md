@@ -1,7 +1,7 @@
-# Challenge Decodificador de Texto
-:construction: Projeto em construção :construction:
+# Challenge Decodificador de Texto  :construction: Projeto em construção :construction:
+
 <br>
-# :hammer: Funcionalidades do projeto
+### :hammer: Funcionalidades do projeto
 
 * `Funcionalidade 1`: Criptografação de texto - é utilizado algumas chaves para poder fazer a criptografia do texto:
      * A letra "e" é convertida para "enter"

@@ -1,4 +1,4 @@
-<h1 align="center">Challenge Decodificador de Texto</h1>
+#Challenge Decodificador de Texto
 :construction: Projeto em construção :construction:
 <br>
 # :hammer: Funcionalidades do projeto

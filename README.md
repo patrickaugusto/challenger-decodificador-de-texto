@@ -1,4 +1,4 @@
-#Challenge Decodificador de Texto
+# Challenge Decodificador de Texto
 :construction: Projeto em construção :construction:
 <br>
 # :hammer: Funcionalidades do projeto

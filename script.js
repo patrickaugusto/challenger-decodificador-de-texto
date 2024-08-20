@@ -1,8 +1,9 @@
 function verificarTexto(texto) {
+    const possuiCaracteresEspeciais = /[^\w\s]/.test(texto);
     const possuiMaiuscula = /[A-Z]/.test(texto);
     const possuiAcento = /[\u00C0-\u00FF]/.test(texto);
 
-    return possuiMaiuscula || possuiAcento;
+    return possuiMaiuscula || possuiAcento || possuiCaracteresEspeciais;
 }
 
 function criptografar() {
@@ -106,3 +107,26 @@ function mudarEstado() {
     document.getElementById("conteudo_exibir").style.display = "none";
     document.getElementById("conteudo_criptografia").style.display = "flex";
 }
+
+function copiarTexto() {
+    const texto = document.getElementById("texto_criptografado").textContent;
+
+    const textarea = document.createElement("textarea");
+    textarea.value = texto;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(textarea);
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".btn_copiar").addEventListener("click", copiarTexto);
+
+    document.getElementById("popup-close").addEventListener("click", () => {
+        document.getElementById("popup").style.display = "none";
+    });
+});

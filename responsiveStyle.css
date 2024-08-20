@@ -23,6 +23,10 @@
         width: 100%;
     }
 
+    .conteudo_texto_criptografia {
+        height: 15rem; 
+      }
+
     #img_txt_not_Found {
         display: none;
     }

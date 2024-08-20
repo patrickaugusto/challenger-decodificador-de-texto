@@ -1,5 +1,20 @@
+function verificarTexto(texto) {
+    const possuiMaiuscula = /[A-Z]/.test(texto);
+    const possuiAcento = /[\u00C0-\u00FF]/.test(texto);
+
+    return possuiMaiuscula || possuiAcento;
+}
+
 function criptografar() {
     let texto = document.getElementById("inserir_texto").value.trim();
+    let avisoElemento = document.querySelector('.aviso_texto');
+
+    if (verificarTexto(texto)) {
+        avisoElemento.style.color = 'red';
+        return;
+    } else {
+        avisoElemento.style.color = '';
+    }
 
     switch (true) {
         case (texto === ""):
@@ -39,7 +54,6 @@ function criptografar() {
             break;
     }
 }
-
 
 function descriptografar() {
     let texto_criptografado = document.getElementById("inserir_texto").value;
@@ -89,6 +103,6 @@ function descriptografar() {
 }
 
 function mudarEstado() {
-        document.getElementById("conteudo_exibir").style.display = "none";
-        document.getElementById("conteudo_criptografia").style.display = "flex";
+    document.getElementById("conteudo_exibir").style.display = "none";
+    document.getElementById("conteudo_criptografia").style.display = "flex";
 }

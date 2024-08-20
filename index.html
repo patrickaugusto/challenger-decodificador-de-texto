@@ -12,16 +12,20 @@
 <body>
     <main class="conteudo">
         <header class="cabecalho">
-            <a href="logo_link">
-                <img class="logo_img" src="assets/Logo.png" alt="Logo" />
-            </a>
-
-            <button id="btn_gravar_audio">Gravar Áudio</button>
+            <img class="logo_img" src="assets/Logo.png" alt="Logo" />
+            <button id="btn_gravar_audio">
+                <img src="assets/Microphone.png">
+            </button>
 
         </header>
 
         <section class="conteudo_criptar">
             <textarea id="inserir_texto" placeholder="Digite seu texto Aqui"></textarea>
+            <div class="aviso">
+                <img src="assets/bi_exclamation-circle-fill.png">
+                <p class="aviso_texto">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            
             <div class="botoes_criptografar">
                 <button class="btn_criptografar" onclick="criptografar()">Criptografar</button>
                 <button class="btn_descriptografar" onclick="descriptografar()">Descriptografar</button>

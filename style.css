@@ -6,7 +6,7 @@
     --cor-2:#E6DCF2;
     --cor-3: #D2C9F2;
     --cor-4: #553eac;
-    --cor-5:#fdfbff;
+    --cor-5:#e6dfff;
     --cor-6: #fff;
 
     --fonte-1: "Roboto", sans-serif;
@@ -36,6 +36,14 @@
     gap: 2rem;
 }
 
+#btn_gravar_audio{
+    border-radius: 3rem;
+    background-color: #fffafa;
+    border: none;
+    box-shadow: 0 0px 32px -8px rgb(255, 255, 255);
+    padding: 5px;
+}
+
 
 /* Lado esquerdo */
 
@@ -45,23 +53,30 @@
     margin-top: 6.25rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 6.25rem;
+    gap: 2rem;
 }
 
 #inserir_texto {
-    width: 100%;
     height: 32rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 1.5rem;
     resize: none;
     padding: 15px 10px;
+    word-break: break-word; 
+    overflow-wrap: break-word;
+}
+
+.aviso{
+    display: flex;
+    gap: 20px;
+
 }
 
 .botoes_criptografar {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -116,7 +131,7 @@
 }
 
 #img_txt_not_Found{
-    width: 80%;
+    width: 100%;
 }
 
 .conteudo_texto {
@@ -135,17 +150,19 @@
 .conteudo_criptografia {
     display: none;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding: 15px;
     gap: 25px;
     width: 100%;
 }
 
 .conteudo_texto_criptografia {
-    overflow-wrap: break-word;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y:auto;  
     border-radius: 5px;
-    height: 600px;
+    width: 100%;
+    height: 30rem;
+    padding: 10px; 
   }
 
 .txt_nao_encontrado{
@@ -154,7 +171,9 @@
 
 #texto_criptografado {
     font-size: 1.5rem;
-    text-wrap: wrap; 
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .campo_btn{
@@ -172,13 +191,18 @@
 
 /* footer */
 .rodape {
+    display: flex;
     background-color: var(--cor-4);
     color: #fff;
-    text-align: center;
-    padding: 10px;
+    justify-content: center;
     bottom: 0;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
 }
 
 .rodape p {
+    justify-content: center;
     margin: 5px 0;
 }
